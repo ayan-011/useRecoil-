@@ -17,6 +17,8 @@ function App()  {
     const networkNotificationCount = useRecoilValue(networkAtom)
    
     const jobsNotificationCount = useRecoilValue(jobsAtom)
+
+    let add = networkNotificationCount + jobsNotificationCount;
      
     //In if else method
     let jobDisplay
@@ -36,7 +38,7 @@ function App()  {
       <button>Messaging  </button>
       <button>Notifications </button>
 
-      <button>Me  </button>
+      <button>Me  ({add})</button>
     </>
   )
  }
