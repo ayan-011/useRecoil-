@@ -1,5 +1,5 @@
 import { RecoilRoot, useRecoilValue } from "recoil"
-import { jobsAtom, networkAtom } from "./atom"
+import { add, jobsAtom, networkAtom } from "./atom"
 import React from "react"
  
 
@@ -18,7 +18,7 @@ function App()  {
    
     const jobsNotificationCount = useRecoilValue(jobsAtom)
 
-    let add = networkNotificationCount + jobsNotificationCount;
+    const totalNotifications = useRecoilValue(add)
      
     //In if else method
     let jobDisplay
@@ -38,7 +38,7 @@ function App()  {
       <button>Messaging  </button>
       <button>Notifications </button>
 
-      <button>Me  ({add})</button>
+      <button>Me  ({totalNotifications})</button>
     </>
   )
  }
