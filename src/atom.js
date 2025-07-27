@@ -29,3 +29,16 @@ export const  add = selector({
      return jobsNotificationCount + networkNotificationCount
   }
 })
+
+// Good approach :- It helps to make site fast  and get data fast on reload.
+
+// export const  notificaitons = atom({
+//     key: "notifications",
+//     default: selector({
+//         get: async()=>{
+// //await new Promise(r => setTimeout(r, 5000))//artificial loading for 5 second.(page will render after 5 sec.)
+//             const res = await axios.get('http//...')
+//             return res.data
+//         }
+//     })
+// })
