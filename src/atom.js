@@ -1,21 +1,21 @@
-import atom from "atom"
+import { atom } from "recoil"
 
-export const networkAtom = atom()({
+export const networkAtom = atom({
     key: 'networkAtom',
     default: 110
 })
 
-export const jobsAtom = atom()({
+export const jobsAtom = atom({
     key: 'jobsAtom',
-    default: 0
+    default: 23
 })
 
-export const notificationAtom = atom()({
+export const notificationAtom = atom({
     key: 'notificationAtom',
     default: 12
 })
 
-export const messagingAtom = atom()({
+export const messagingAtom = atom({
     key: 'messagingAtom',
     default: 0
 })
